@@ -16,4 +16,13 @@ RUN \
 RUN ln -s /usr/bin/python2.7 /usr/bin/python
 RUN mkdir -p /srv/var
 RUN cd /srv/var/ &&/usr/local/bin/npm install -g gulp -d
-RUN cd /srv/var/ &&/usr/local/bin/npm install gulp-git gulp-minify-css gulp-prompt gulp-sass gulp-sftp gulp-template gulp-uglify gulp-util gulp-version-number pump webpack webpack-stream -d
+RUN cd /srv/var/ &&/usr/local/bin/npm install gulp gulp-git gulp-minify-css gulp-prompt gulp-sass gulp-sftp gulp-template gulp-uglify gulp-util gulp-version-number pump webpack webpack-stream -d
+
+ADD gulpDebug.sh /usr/local/bin/
+ADD gulpRelease.sh /usr/local/bin/
+
+RUN chmod +x /usr/local/bin/gulpDebug.sh
+RUN chmod +x /usr/local/bin/gulpRelease.sh
+RUN ln -s /usr/local/bin/gulpDebug.sh /usr/bin/gulpDebug
+RUN ln -s /usr/local/bin/gulpRelease.sh /usr/bin/gulpRelease
+
