@@ -14,4 +14,6 @@ RUN \
   apt-get clean all
 
 RUN ln -s /usr/bin/python2.7 /usr/bin/python
-RUN mkdir -p /srv/var && cd /srv/var/ && /usr/local/bin/npm install gulp gulp-git gulp-minify-css gulp-prompt gulp-sass gulp-sftp gulp-template gulp-uglify gulp-util gulp-version-number pump webpack webpack-stream -d
+RUN mkdir -p /srv/var
+RUN cd /srv/var/ &&/usr/local/bin/npm install -g gulp -d
+RUN cd /srv/var/ &&/usr/local/bin/npm install gulp-git gulp-minify-css gulp-prompt gulp-sass gulp-sftp gulp-template gulp-uglify gulp-util gulp-version-number pump webpack webpack-stream -d
