@@ -7,6 +7,13 @@
 
 ### 部署
 
+dev
+
+```
+docker run -rm -v $(pwd)/code:/srv/var/code registry-wan.zaoshu.io/ciutils/gulp:v1 gulpDev
+
+```
+
 debug
 
 ```
