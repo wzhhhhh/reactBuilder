@@ -29,3 +29,6 @@ RUN ln -s /usr/local/bin/gulpDev.sh /usr/bin/gulpDev
 RUN ln -s /usr/local/bin/gulpDebug.sh /usr/bin/gulpDebug
 RUN ln -s /usr/local/bin/gulpRelease.sh /usr/bin/gulpRelease
 
+RUN useradd jenkins
+USER jenkins
+
