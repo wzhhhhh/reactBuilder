@@ -8,7 +8,7 @@ RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get install -y python2.7 git wget
 RUN \
-  wget -O '/tmp/node-v4.4.6-linux-x64.tar.gz' https://nodejs.org/dist/v4.4.6/node-v4.4.6-linux-x64.tar.gz && \
+  wget -O '/tmp/node-v4.4.6-linux-x64.tar.gz' https://dl.zaoshu.io/f/beijing/zaoshulibs?expire=6313010600963&filename=nodejs%2Fnode-v4.4.6-linux-x64.tar.gz&nonstr=MXriJGqqnVvYZBll&signature=7c062be8059bbec5659f91043f4b452c8b98c7f3&time=1490600963 && \
   tar --strip-components=1 -xvf '/tmp/node-v4.4.6-linux-x64.tar.gz' -C /usr/local && \
   apt-get autoremove -y && \
   apt-get clean all
