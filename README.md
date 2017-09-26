@@ -1,8 +1,8 @@
-# gulpDocker
+# react builder in docker
 
 ## 说明 文档什么的最讨厌了
 
-### 当前版本 v2
+### 当前版本 v0.1.10
 
 
 ### 部署
@@ -10,21 +10,21 @@
 dev
 
 ```
-docker run -rm -v $(pwd)/code:/srv/var/code registry-wan.zaoshu.io/ciutils/gulp:v2 gulpDev
+docker run -rm -v $(pwd)/code:/srv/var/code zaoshulib/reactbuilder:v0.1.10 /usr/bin/buildRelease
 
 ```
 
 debug
 
 ```
-docker run -rm -v $(pwd)/code:/srv/var/code registry-wan.zaoshu.io/ciutils/gulp:v2 gulpDebug
+docker run -rm -v $(pwd)/code:/srv/var/code zaoshulib/reactbuilder:v0.1.10 /usr/bin/buildDebug
 
 ```
 
 release
 
 ```
-docker run -rm -v $(pwd)/code:/srv/var/code registry-wan.zaoshu.io/ciutils/gulp:v2 gulpRelease
+docker run -rm -v $(pwd)/code:/srv/var/code zaoshulib/reactbuilder:v0.1.10 /usr/bin/buildRelease
 
 ```
 

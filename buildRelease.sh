@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd /srv/var/code
-gulp debug
+npm run build
