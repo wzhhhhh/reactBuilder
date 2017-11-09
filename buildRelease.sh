@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd /srv/var/code
-npm run build
+npm run production-build

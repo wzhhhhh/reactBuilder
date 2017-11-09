@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd /srv/var/code
-npm run dev
+npm run build
